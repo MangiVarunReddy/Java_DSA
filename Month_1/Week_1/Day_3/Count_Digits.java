@@ -21,3 +21,5 @@ public class Count_Digits {
     }
 
 }
+
+// Progtan to count number of digits in a number
