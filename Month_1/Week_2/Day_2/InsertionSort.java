@@ -62,3 +62,6 @@ public static void insertionSort(int arr[],int n){
         insertionSort(arr,n);
 }
 }
+
+//Problem Link
+//https://www.codingninjas.com/studio/problems/insertion-sort_624381?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
