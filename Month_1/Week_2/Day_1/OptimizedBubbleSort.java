@@ -1,26 +1,31 @@
 /*
- Bubble sort is a simple sorting algorithm that repeatedly compares adjacent 
- elements and swaps them if they are in the wrong order. It has a worst-case 
- time complexity of O(n^2) and is not efficient for large lists. Optimized 
- bubble sort adds a flag to stop early when the list is already sorted, reducing 
- unnecessary comparisons. Despite these optimizations, it is still inefficient 
- compared to more advanced sorting algorithms and is rarely used in practice for 
- large datasets.
+Optimized Bubble Sort is a variation of the Bubble Sort algorithm that adds an 
+early exit condition. It checks if any swaps were made during a pass and breaks 
+the loop early if no swaps occurred, indicating that the array is already sorted. 
+This optimization reduces unnecessary comparisons and improves the algorithm's 
+efficiency, especially for partially sorted arrays. However, it still has a 
+worst-case time complexity of O(n^2), making it inefficient for large datasets. 
+More advanced sorting algorithms are preferred for larger data sets.
 
  */
 import java.util.*;
-public class BubbleSort {
+public class OptimizedBubbleSort {
 
-public static void bubbleSort(int arr[], int n){
+public static void optimizedBubbleSort(int arr[], int n){
 
-    
+    boolean swapped;
     for(int i=0;i<n;i++){
+        swapped=false;
         for(int j=0;j<n-i-1;j++){
             if(arr[j]>arr[j+1]){
                 int temp=arr[j];
                 arr[j]=arr[j+1];
                 arr[j+1]=temp;
+                swapped=true;
             }
+        }
+        if (!swapped) {
+            break;
         }
     }
     System.out.println("The sorted array is: ");
@@ -48,6 +53,7 @@ public static void bubbleSort(int arr[], int n){
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        bubbleSort(arr,n);
+        optimizedBubbleSort(arr,n);
     }
 }
+
