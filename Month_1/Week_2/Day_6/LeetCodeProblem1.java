@@ -114,7 +114,5 @@ public class LeetCodeProblem1 {
 }
 
 /*
- * LeetCode Problem Link:
- * https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
- * description/
+ * LeetCode Problem Link: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
  */
