@@ -9,7 +9,7 @@ public class LeetCode189 {
         int k = 2;
         int j = 0;
         int x;
-        while (j <= k) {
+        while (j < k) {
             x = arr[0];
             for (int i = 1; i < n; i++) {
                 if (i < n) {
